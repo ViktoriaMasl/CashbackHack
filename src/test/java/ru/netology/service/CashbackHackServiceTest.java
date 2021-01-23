@@ -13,6 +13,11 @@ public class CashbackHackServiceTest {
     }
 
     @Test
+    public void shouldCashbackThanOneRub() {
+        assertEquals(service.remain(1), 999);
+    }
+
+    @Test
     public void shouldCashbackLessThanThousand() {
         assertEquals(service.remain(999), 1);
     }
